@@ -1,28 +1,25 @@
 // console.log("Hello, JavaScript!");
 
-
-// Primitive & InPrimitive
-
 //NUM
-var age = 25; // 1.NUM / INT=25 FLOAT=12.5
-var allSalary = 10025; // 1.NUM / INT=25 FLOAT=12.5
-var workingMonth = 14
+var age = 25;
+var salary = 2501.2;
+var workmonth = 12;
 
 //STRING
 var fullname = "Murad Ahmadov"
-var fullname2 = 'Murad Ahmadov'
-var fullname3 = `Murad Ahmadov`
+var fullname2 = 'Murad Ahmadov 2'
+var fullname3 = `Murad Ahmadov 3`
 
 //BOOLEAN
-var  isNew = false
-var  isWorking = true
+
+var isNew = false
+var isWorking = true
 
 //NULL
 var productImg = "https://kontak.az/mebeller/divan.png"
 var productImg = null
 
-//UNDEFINED
-var password = undefined
-
+//UNDIFIEND
+var password = undefined 
 
 

@@ -1,0 +1,841 @@
+/* ====== RESET + BASE ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #192521;
+  color: #ffffff;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 16px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.section-title.left {
+  text-align: left;
+}
+
+.section-subtitle.left {
+  margin-left: 0;
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+/* ====== NAVBAR ====== */
+.navbar {
+  border-bottom: 1px solid #1e2229;
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.navbar__logo {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.navbar__center {
+  display: flex;
+  gap: 32px;
+}
+
+.navbar__right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-link {
+  color: #d0d0d0;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-link:hover {
+  opacity: 0.8;
+}
+
+.nav-link.active {
+  color: #ffffff;
+}
+
+/* ====== HERO ====== */
+.hero {
+  padding-top: 60px;
+}
+
+.hero__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero__content {
+  max-width: 420px;
+}
+
+.hero__title {
+  font-size: 50px;
+  font-weight: 700;
+  max-width: 600px;
+
+  opacity: 0;
+  animation: slideIn 1s ease-out forwards;
+  /* line-height: 1.05;
+  margin-bottom: 24px; */
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px); /* aşağıdan gəlsin */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero__subtitle {
+  font-size: 15px;
+  color: #c4c4c4;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.hero__image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero__image {
+  max-height: 520px;
+}
+
+/* ====== COMPANIES ====== */
+
+.section.companies {
+  background-color: #191a1c;
+}
+
+.companies__logos {
+  display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 sütun – şəkildə necədirsə */
+    gap: 50px; /* Loqolar arasındakı məsafə */
+    width: 80%;
+    margin: 0 auto; /* Ortaya gətirir */
+    align-items: center;
+    justify-items: center;
+}
+
+.companies__logos img {
+    width: 150px;   /* İstəyə görə dəyiş */
+}
+/* ====== STEPS ====== */
+
+.section.steps {
+  background-color: #191a1c;
+  border-bottom: 1px solid rgba(231, 231, 231, 0.05);
+}
+
+
+.steps__inner {
+  display: flex;
+  gap: 48px;
+  align-items: center;
+}
+
+.steps__image-card {
+  position: relative;
+  max-width: 380px;
+}
+
+.steps__badge {
+  position: absolute;
+  left: 16px;
+  bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #111827;
+  padding: 12px 16px;
+  border-radius: 999px;
+}
+
+.badge-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background-color: #22c55e;
+}
+
+.badge-title {
+  font-size: 13px;
+  color: #a1a1aa;
+}
+
+.badge-text {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.steps__content {
+  flex: 1;
+  
+}
+
+.steps__list {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.step-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.step-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background-color: #1d4ed8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.step-item h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.step-item p {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+/* ====== CARDS COMMON ====== */
+.cards-grid {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.cards-grid--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* FEATURED JOBS */
+
+.section.featured {
+  background-color: #191a1c !important;
+}
+
+.job-card {
+  background-color: #111827;
+  border-radius: 20px;
+  padding: 24px 20px;
+  border: 1px solid #1f2933;
+}
+
+.job-tag {
+  display: inline-block;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+
+.job-tag--green {
+  background-color: #052e16;
+  color: #4ade80;
+}
+
+.job-tag--blue {
+  background-color: #111827;
+  color: #60a5fa;
+}
+
+.job-tag--orange {
+  background-color: #451a03;
+  color: #fb923c;
+}
+
+.job-card h3 {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.job-location {
+  font-size: 13px;
+  color: #9ca3af;
+  margin-bottom: 20px;
+}
+
+.job-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.job-logo-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background-color: #1d4ed8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* NEWS CARDS */
+.news-card {
+  background-color: #111827;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.news-body {
+  padding: 18px 20px 22px;
+}
+
+.news-tag {
+  font-size: 12px;
+  color: #9ca3af;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.news-body h3 {
+  font-size: 16px;
+}
+
+/* ====== CATEGORIES ====== */
+
+.section.news {
+  background-color: #1e1f21 !important;
+}
+
+.categories {
+  background-color: #0b1120;
+}
+
+.categories-grid {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.cat-card {
+  background-color: #111827;
+  border-radius: 18px;
+  padding: 24px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.cat-card:hover {
+  background-color: #4f46e5; /* bənövşəyi */
+  transform: translateY(-3px);
+}
+
+.cat-card:hover p {
+  color: #e5e7eb; /* Jobs yazısı bir az açıq olsun */
+}
+
+
+.cat-card h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.cat-card p {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+/* ====== NEWSLETTER ====== */
+
+.section.newsletter {
+  background-color: #191a1c;
+}
+
+.newsletter {
+  text-align: center;
+}
+
+.newsletter__icon {
+  margin: 0 auto 16px;
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #16a34a;
+  font-size: 24px;
+}
+
+.newsletter__form {
+  margin: 24px auto 12px;
+  max-width: 480px;
+  display: flex;
+  gap: 8px;
+}
+
+.newsletter__form input {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 999px;
+  border: 1px solid #374151;
+  background-color: transparent;
+  color: #e5e7eb;
+}
+
+.newsletter__form input::placeholder {
+  color: #91949a;
+}
+
+.newsletter__info {
+  font-size: 12px;
+  color: #91949a;
+}
+
+/* ====== FOOTER ====== */
+.footer {
+  background-color: #020617;
+  padding: 60px 0;
+}
+
+.footer__inner {
+  display: grid;
+  grid-template-columns: 2fr repeat(4, 1fr);
+  gap: 32px;
+}
+
+.footer__brand p {
+  font-size: 14px;
+  color: #9ca3af;
+  margin: 12px 0 20px;
+}
+
+.footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.footer__socials img {
+  width: 20px;
+  height: 20px;
+  display: block;
+  object-fit: contain;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+
+.footer__social-link:hover img {
+  transform: translateY(-2px) scale(1.05);
+  filter: brightness(1.15);
+}
+
+
+.footer__col h4 {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.footer__col a {
+  display: block;
+  text-decoration: none;
+  color: #9ca3af;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+/* ====== ABOUT PAGE EXTRA ====== */
+.about-page {
+  background-color: #191a1c; /* istədiyin rəngi yaz */
+}
+
+.about-text{
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  display: flex;
+  gap: 80px;
+  padding: 40px 0;
+}
+
+.about-hero__image {
+  margin-top: 32px;
+}
+
+.about-text__inner {
+  display: flex;
+  gap: 40px;
+}
+
+ .about-text__left {
+  flex: 1;
+} 
+
+.about-text__left h2 {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 58px;
+  width: 451px;
+  margin-bottom: 120px;
+  height: 174px;
+  line-height: 1.3; 
+}
+
+.about-text__right {
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+  opacity: 70%;
+  width: 469px;
+  margin-bottom: 5px;
+  padding: 8px;
+}
+
+
+.about-team {
+  background-color: #191a1c;  /* Meet our team üçün rəng */
+}
+
+.about-help {
+  background-color: #1e1f21;  /* “We are here to help…” üçün rəng */
+  padding: 80px 0;
+}
+
+.about-help__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  /* min-height: 50vh; */
+}
+
+
+
+
+.about-help__photos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  max-width: 360px;
+}
+
+.about-help__text {
+  width: 495px;
+  height: 410px;
+  margin-top: auto;
+  flex: 1;
+  font-size: 28px;
+  color: #d1d5db;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.about-grid__text h2 {
+  font-size: 24px;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 900px) {
+  .navbar__center {
+    display: none;
+  }
+
+  .hero__inner,
+  .steps__inner,
+  .about-text__inner,
+  .about-grid__inner {
+    flex-direction: column;
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cards-grid--3,
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.team-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.team-card {
+  background-color: #111827;
+  border-radius: 20px;
+  padding: 18px 18px 22px;
+}
+
+.team-body h3 {
+  font-size: 16px;
+  margin-top: 14px;
+  margin-bottom: 4px;
+}
+
+.team-body p {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+@media (max-width: 900px) {
+  .team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+    /* SUPPORT */
+
+.section {
+  padding: 220px 0;
+  
+}
+
+/* .support-page {
+  background-color: #1e1f21;
+  padding: 80px 0;
+} */
+
+.container{
+  padding: 0 250px;
+  margin: 0 auto;
+  max-width: 1440px;
+} 
+.section-subtitle{
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: -0.20000000298023224px;
+    text-align: center;
+    margin-bottom: 39px;
+    opacity: 70%;
+}
+
+.section-title{
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 65px;
+    letter-spacing: -2px;
+    text-align: center;
+    margin-bottom: 44px;
+}
+.support__content {
+  margin-top: 40px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #d1d5db;
+}
+
+.main__content__support {
+  opacity: 70%;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: -0.20000000298023224px;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.support__content h2 {
+  font-size: 18px;
+  margin: 24px 0 8px;
+}
+
+.support__content ul {
+  padding-left: 20px;
+}
+
+.support__content li {
+  margin-bottom: 6px;
+}
+
+
+/* ===== LOGIN SECTION (only login.html) ===== */
+
+/* ==== LOGIN PAGE ==== */
+
+/* Yalnız login səhifəsinin fonu */
+.login-page {
+  background-color: #1e1f21;   /* fon rəngi */
+}
+
+/* Login bölməsi – ekranda şaquli ortalama */
+.section-auth {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  padding: 80px 0 120px;
+  
+}
+
+.auth__inner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Kart */
+.auth__card {
+  width: 420px;
+  padding: 40px 40px 32px;
+  background-color: #191a1c;
+  border-radius: 24px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8);
+}
+
+/* Başlıq və alt mətni */
+.auth__card .section-title {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.auth__card .section-subtitle {
+  text-align: center;
+  margin-bottom: 32px;
+  opacity: 0.7;
+}
+
+/* Form sahələri */
+.auth__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.auth__form label span {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.auth__form input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 6px;
+  border: 1px solid #404349;
+  background-color: #191a1c;
+  color: #ffffff;
+  outline: none;
+}
+
+/* Mavi düymə – kartın eninə bərabər */
+.auth__btn {
+  width: 100%;
+  margin-top: 24px;
+  padding: 14px;
+  border-radius: 6px;
+  border: none;
+  background-color: #170DA5;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.auth__btn:hover {
+  filter: brightness(1.1);
+}
+
+/* Alt qeyd: “Don't have an account…” */
+.auth__note {
+  margin-top: 28px;
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.auth__note a {
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+.auth__note a:hover {
+  text-decoration: underline;
+}
+
+
+/* ====== SIGNUP PAGE EXTRA ====== */
+.signup-page {
+  background-color: #1e1f21;  /* signup səhifəsinin fon rəngi */
+}
+
+
+
+
+

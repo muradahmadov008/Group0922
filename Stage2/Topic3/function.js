@@ -56,6 +56,21 @@
 // console.log(message3);
 
 
+// function catchMinNumber (numbers){
+
+//     let prevNum = numbers[0];
+
+//     for (let i = 1; i < numbers.length; i++){
+
+//         let currentNum = numbers[i];
+
+//         if(currentNum < prevNum){
+//             prevNum = currentNum;
+//         }
+//     }
+
+//     return prevNum;
+// }
 
 
 // let fruits = ["apple", "orange","lemon", "pie",];

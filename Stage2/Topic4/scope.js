@@ -89,16 +89,16 @@
 
 // EXERCISE
 
-function foo (){
-    console.log("Foo!");
+// function foo (){
+//     console.log("Foo!");
 
-function bar (){
-    console.log("Bar!");
-}
+// function bar (){
+//     console.log("Bar!");
+// }
 
-return bar();
+// return bar();
 
-}
-let netice = foo();
+// }
+// let netice = foo();
 
-console.log("netice",netice);
+// console.log("netice",netice);

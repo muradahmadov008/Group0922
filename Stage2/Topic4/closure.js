@@ -19,24 +19,24 @@
 // increment();
 
 
-let say1 = 0;
+// let say1 = 0;
 
 
-let qaliq1 = 10;
+// let qaliq1 = 10;
 
-function muradSuSaygaci(){
-    say1 = say1 + 1;
-    qaliq1 = qaliq1 +5;
+// function muradSuSaygaci(){
+//     say1 = say1 + 1;
+//     qaliq1 = qaliq1 +5;
 
-    console.log("S u saygaci:", say1);
-}
+//     console.log("Su saygaci:", say1);
+// }
 
-muradSuSaygaci();
-muradSuSaygaci();
-muradSuSaygaci();
-muradSuSaygaci();
-muradSuSaygaci();
-muradSuSaygaci();
+// muradSuSaygaci();
+// muradSuSaygaci();
+// muradSuSaygaci();
+// muradSuSaygaci();
+// muradSuSaygaci();
+// muradSuSaygaci();
 
 
 

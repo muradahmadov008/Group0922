@@ -1,35 +1,67 @@
-// Json - JavaScript Object Notation
+// BANK ACCOUNT PERSONAL
 
 
-// let person1 = [ "John", 30, "New York"];
+const BankAccount ={
+    name:null,
+    surname:null,
+    balance:0,
+    history:[],
+    card_number:null,
 
+    constructor: function(name , surname, balance ){
 
-let person2 = {
-    name: "John",
-    age: 30,
-    city: "New York",
-    skills: ["JavaScript", "React", "Node.js"]
+    this.name = name;
+    this.surname = surname;
+    this.balance = balance;
+    this.card_number = Math.round(Math.random() * 10000000000000000)
+
+    const newAccount = {...this}
+
+    return newAccount;
+
+},
+
+addBalance:function(amount){
+    this.balance += amount
+    this.history = [`+${amount}`, ...this.history]
+},
+
+withdrawBalance:function(amount){
+
+    if(this.balance > amount){
+        this.balance = this.balance -amount
+        this.history = [`-${amount}`, ...this.history]
+    }else{
+        console.log("Insufficient funds");
+    }   
+},
+
+showBalance:function(){
+
+    console.log("==============");
+    console.log("Full Name: ", this.name + " " +this.surname);
+    console.log("Balance: ", this.balance);
+    console.log("==============");
+
 }
 
-let person3 = {
-    "name": "Mike",
-    "age": 20,
-    "city": "Amsterdam",
-    "skills": ["JavaScript", "React", "Node.js" , "Python"]
-}
-
-
-let result = [person2, person3];
-console.log("result:", result);
-
-
-for (let i = 0; i < result.length; i++) {
-    console.log(result[i].name);
-    console.log(result[i].age);
-    console.log(result[i].city);
-    console.log(result[i].skills.join(", "));
 }
 
 
 
+const MuradAccount = BankAccount.constructor("Murad", "Akmedov", 5000);
+MuradAccount.addBalance(1000)
+MuradAccount.addBalance(1000)
+MuradAccount.addBalance(1000)
+MuradAccount.addBalance(1000)
+MuradAccount.addBalance(1000)
 
+// MuradAccount.showBalance.call(MuradAccount)
+
+MuradAccount.withdrawBalance(5000)
+MuradAccount.showBalance.call(MuradAccount)
+MuradAccount.withdrawBalance(4000)
+MuradAccount.showBalance.call(MuradAccount)
+
+
+console.log(MuradAccount);

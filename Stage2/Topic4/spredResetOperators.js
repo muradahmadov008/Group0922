@@ -17,19 +17,19 @@
 // console.log("result",result);
 
 
-function calc(operator, ...arr){
-    let total = 1
-    for (let i=0; i<arr.length; i++){
-        if(operator === "multiply"){
-            total *= arr[i];
-        } else if(operator === "add"){
-            total += arr[i];
-        }
-    }
+// function calc(operator, ...arr){
+//     let total = 1
+//     for (let i=0; i<arr.length; i++){
+//         if(operator === "multiply"){
+//             total *= arr[i];
+//         } else if(operator === "add"){
+//             total += arr[i];
+//         }
+//     }
 
-    return total;
-}
+//     return total;
+// }
 
-let result = calc("add",1,2,3,4,5);
+// let result = calc("add",1,2,3,4,5);
 
-console.log("add",result);
+// console.log("add",result);

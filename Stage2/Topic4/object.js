@@ -27,6 +27,7 @@ const hibridCar = {
     year: null,
     color: "",
     speed: 0,
+   
 
     fill: function(carName,carBrand,carYear){
         this.name = carName;

@@ -1,50 +1,78 @@
-let playerScore = 0;
-let computerScore = 0;
+document.addEventListener("DOMContentLoaded", () => {
+  const login = document.getElementById("login");
+  const playDiv = document.getElementById("play");
+  const welcome = document.getElementById("welcome");
+  const result = document.getElementById("result");
+  const startBtn = document.getElementById("startBtn");
+  const resetBtn = document.getElementById("resetBtn");
 
-function getComputerChoice() {
+  const infoPanel = document.getElementById("infoPanel");
+  const infoStartBtn = document.getElementById("infoStartBtn");
+
+  infoStartBtn.addEventListener("click", () => {
+    infoPanel.style.display = "none"; // paneli gizlədir
+    login.classList.remove("hidden"); // login ekranını göstər
+  });
+
+
+  startBtn.addEventListener("click", () => {
+    const name = document.getElementById("nickname").value.trim();
+    if (!name) {
+      alert("Nickname daxil et");
+      return;
+    }
+
+    welcome.textContent = `Welcome, ${name}!`;
+    login.classList.add("hidden");
+    playDiv.classList.remove("hidden");
+  });
+
+  document.querySelectorAll(".choices button").forEach((btn) => {
+    btn.addEventListener("click", () => play(btn.dataset.choice));
+  });
+
+function play(userChoice) {
   const choices = ["rock", "paper", "scissors"];
-  const randomIndex = Math.floor(Math.random() * choices.length);
-  return choices[randomIndex];
-}
+  const cpuChoice = choices[Math.floor(Math.random() * 3)];
 
-function playGame(playerChoice) {
-  console.log(" Player chose:", playerChoice);
+  
+  document.querySelectorAll(".choices button").forEach((btn) => {
+    btn.classList.remove("active");
+  });
 
-  const computerChoice = getComputerChoice();
-  console.log(" Computer chose:", computerChoice);
+  const userBtn = document.querySelector(
+    `.choices button[data-choice="${userChoice}"]`,
+  );
+  userBtn.classList.add("active");
 
-  let result = "";
+  let text = `You: ${userChoice} | CPU: ${cpuChoice} → `;
 
-  if (playerChoice === computerChoice) {
-    result = "🤝 It's a Draw!";
+
+  let resultClass = "";
+  if (userChoice === cpuChoice) {
+    text += "Draw 😐";
+    resultClass = "draw";
   } else if (
-    (playerChoice === "rock" && computerChoice === "scissors") ||
-    (playerChoice === "scissors" && computerChoice === "paper") ||
-    (playerChoice === "paper" && computerChoice === "rock")
+    (userChoice === "rock" && cpuChoice === "scissors") ||
+    (userChoice === "paper" && cpuChoice === "rock") ||
+    (userChoice === "scissors" && cpuChoice === "paper")
   ) {
-    result = "🎉 You Win!";
-    playerScore++;
+    text += "You win 🎉";
+    resultClass = "win";
   } else {
-    result = "😢 You Lose!";
-    computerScore++;
+    text += "You lose 💀";
+    resultClass = "lose";
   }
 
-  document.getElementById("result").textContent =
-    `You chose ${playerChoice}, Computer chose ${computerChoice}. ${result}`;
-
-  document.getElementById("playerScore").textContent = playerScore;
-  document.getElementById("computerScore").textContent = computerScore;
-
-  console.log(" Score -> Player:", playerScore, "Computer:", computerScore);
+  result.textContent = text;
+  result.className = `result ${resultClass}`;
 }
 
-function resetGame() {
-  console.log(" Game reset");
 
-  playerScore = 0;
-  computerScore = 0;
-
-  document.getElementById("playerScore").textContent = 0;
-  document.getElementById("computerScore").textContent = 0;
-  document.getElementById("result").textContent = "Choose your move!";
-}
+  resetBtn.addEventListener("click", () => {
+    playDiv.classList.add("hidden");
+    login.classList.remove("hidden");
+    document.getElementById("nickname").value = "";
+    result.textContent = "";
+  });
+});

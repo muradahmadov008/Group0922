@@ -1,3 +1,13 @@
-const myPara = document.querySelector(".demo");
-myPara.innerHTML = "Hello World!";
-console.log(myPara);
+//            QUESTION 1
+// const boxs = document.getElementsByClassName("box");
+// for(let i = 0; i < boxs.length; i++){
+//     boxs[i].textContent = "This is a box";
+// }
+
+
+//            QUESTION 2
+
+const listEL = document.querySelectorAll("ul li");
+listEL.forEach(list =>{
+    list.textContent = "List Item";
+});

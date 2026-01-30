@@ -1,2 +1,0 @@
-basliq.textContent = "Hello World";
-

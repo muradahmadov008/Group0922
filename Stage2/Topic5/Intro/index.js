@@ -37,9 +37,7 @@
 //     }
 // });
 
-// window.addEventListener("keypress", function(e) {
-//     console.log(e);
-// });
+
 
 // Mouse Events
 const boxEl = document.querySelector("#boxEl");
@@ -47,14 +45,13 @@ const changeEl = document.querySelector("#changeEl");
 
 boxEl.addEventListener("mouseover", function (e) {
   changeEl.classList.remove("d-none");
-  // console.log("e", e);
+  console.log("e", e);
   // boxEl.innerHTML = `X: ${e.offsetX} Y: ${e.offsetY}`;
 });
 
 boxEl.addEventListener("mouseout", function (e) {
   changeEl.classList.add("d-none");
-  // console.log("e", e);
-  // boxEl.innerHTML = ``
+  console.log("e", e);
 });
 
 

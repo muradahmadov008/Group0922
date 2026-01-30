@@ -1,0 +1,2 @@
+basliq.textContent = "Hello World";
+

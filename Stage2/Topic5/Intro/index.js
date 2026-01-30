@@ -1,42 +1,60 @@
-//Elements
-const btnShow = document.querySelector("#btnShow")
-const title = document.querySelector("#title")
-const menuBar = document.querySelector("#menuBar")
-const formBtn = document.querySelector("#formBtn")
- 
-const userData =[]
-//Events
-btnShow.addEventListener("click",function(){
-    console.log("Say Hello");
-    title.innerHTML = 'Hello'
-    const isNotShow = menuBar.classList.contains("d-none")
-    if(isNotShow){
-        menuBar.classList.remove("d-none")
-    }else{
-        menuBar.classList.add("d-none")
-    }
-})
+// Mouse Events
 
-formBtn.addEventListener("click",function(){
+// 1.Click Event
+// 2.Double Click Event
+// 3.Mouse Enter Event
+// 4.Mouse Leave Event
+// 5.Mouse Over Event
+// 6.Mouse Out Event
+// 7.Context Menu Event
 
-    const inputEl = document.querySelector("#fullname")
-    const listEL = document.querySelector("#listEL") 
+// Keyboard Events
 
-    const userValue = inputEl.value
-    
+// 1.Key Down Event
+// 2.Key Up Event
+// 3.Key Press Event
 
-    userData.push(userValue)
+// Focus Events
+//1.Focus & Blur Events
+// const inputEl = document.querySelector("#inputEl")
 
-    const content = userData.map(item=>`<li class="text-danger">${item}</li>`)
+// inputEl.addEventListener("focus", function() {
 
-    console.log("content",content);
+//     console.log("Input focused");
+//     inputEl.nextElementSibling.classList.remove("d-none");
+// });
 
-    listEL.innerHTML = content.join("")
+// inputEl.addEventListener("blur", function() {
+//     console.log("Input blurred");
+//     inputEl.nextElementSibling.classList.add("d-none");
+// });
 
+// Keyboard Events
+// inputEl.addEventListener("keypress", function(e) {
+//     const isEnter= e.key === "Enter";
+//     if(isEnter){
+//         console.log("Form Submitted");
+//     }
+// });
 
-    // listEL.innerHTML = `<li class="text-danger">Test1</li> <li class="text-danger">Test2</li> <li class="text-danger">Test3</li>`
+// window.addEventListener("keypress", function(e) {
+//     console.log(e);
+// });
 
-    
-})
+// Mouse Events
+const boxEl = document.querySelector("#boxEl");
+const changeEl = document.querySelector("#changeEl");
+
+boxEl.addEventListener("mouseover", function (e) {
+  changeEl.classList.remove("d-none");
+  // console.log("e", e);
+  // boxEl.innerHTML = `X: ${e.offsetX} Y: ${e.offsetY}`;
+});
+
+boxEl.addEventListener("mouseout", function (e) {
+  changeEl.classList.add("d-none");
+  // console.log("e", e);
+  // boxEl.innerHTML = ``
+});
 
 

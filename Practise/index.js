@@ -7,7 +7,15 @@
 
 //            QUESTION 2
 
-const listEL = document.querySelectorAll("ul li");
-listEL.forEach(list =>{
-    list.textContent = "List Item";
-});
+// const listEL = document.querySelectorAll("ul li");
+// listEL.forEach(list =>{
+//     list.textContent = "List Item";
+// });
+
+
+//            QUESTION 3
+
+// const divs = document.querySelectorAll("div");
+// divs.forEach(div =>{
+//     div.style.backgroundColor = "lightblue";
+// });

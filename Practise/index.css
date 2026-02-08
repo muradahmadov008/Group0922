@@ -1,0 +1,104 @@
+ /* body {
+    background: #121212; 
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+  }
+
+  .light-box {
+    margin: 30px 0;
+    padding: 20px;
+  }
+
+  .btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    margin: 0 10px;
+  }
+
+  .on { background: #ffca28; color: #000; }
+  .on:hover { box-shadow: 0 0 20px #ffca28; }
+
+  .off { background: #444; color: #fff; }
+  .off:hover { background: #666; }  */
+
+
+  body {
+    background: #121212; /* Tünd fon 🌑 */
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05); /* Şəffaf görünüş 🧊 */
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+.light-box {
+    margin: 30px 0;
+    padding: 20px;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Düymələr arası məsafə */
+}
+
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.on {
+    background: #ffca28; /* Sarı rəng 💡 */
+    color: #000;
+}
+
+.on:hover {
+    box-shadow: 0 0 20px #ffca28;
+    transform: translateY(-2px);
+}
+
+.off {
+    background: #444;
+    color: #fff;
+}
+
+.off:hover {
+    background: #666;
+    transform: translateY(-2px);
+}

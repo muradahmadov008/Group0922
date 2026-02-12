@@ -162,15 +162,31 @@
 //     "https://www.w3schools.com/js/pic_bulboff.gif";
 // }
 
-function turnOn() {
-  document.getElementById("myImage").src =
-    "https://www.w3schools.com/js/pic_bulbon.gif";
-  document.body.style.backgroundColor = "#2c2c00"; // İşığı yandırırıq 💡
+// function turnOn() {
+//   document.getElementById("myImage").src =
+//     "https://www.w3schools.com/js/pic_bulbon.gif";
+//   document.body.style.backgroundColor = "#2c2c00"; // İşığı yandırırıq 💡
+// }
+
+// function turnOff() {
+//   document.getElementById("myImage").src =
+//     "https://www.w3schools.com/js/pic_bulboff.gif";
+//   document.body.style.backgroundColor = "#121212"; // İşığı söndürürük 🌑
+// }
+
+
+
+//             QUESTION 12
+
+let placeText = document.querySelector(".placeText");
+const getLocation = () => {
+  console.log(window);
+  window.navigator.geolocation.getCurrentPosition(position => {
+      console.log(position.coords);
+
+      placeText.innerHTML = `${position.coords.longitude} ${position.coords.latitude}`
+    
+    })
 }
 
-function turnOff() {
-  document.getElementById("myImage").src =
-    "https://www.w3schools.com/js/pic_bulboff.gif";
-  document.body.style.backgroundColor = "#121212"; // İşığı söndürürük 🌑
-}
 

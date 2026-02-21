@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Details</title>
+  
+  <link rel="stylesheet" href="../../Group0922/Practise/reset.css" />
+  <link rel="stylesheet" href="../../Group0922/Practise/global.css" />
+  <link rel="stylesheet" href="../../Group0922/Practise/detailed.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="layout">
+    
+    <aside class="sidebar">
+      <div class="side-top">
+        <img class="logo" src="../../Group0922/Practise/assets/client/İconsİmages/logo.svg" alt="Logo" />
+        <nav class="side-nav">
+          <a class="side-link" href="#"><img src="../../Group0922/Practise/assets/client/İconsİmages/home.svg" alt="Home" /></a>
+          <a class="side-link" href="./search.html"><img src="../../Group0922/Practise/assets/client/İconsİmages/grid.svg" alt="Grid" /></a>
+          <a class="side-link active" href="#"><img src="../../Group0922/Practise/assets/client/İconsİmages/video.svg" alt="Video" /></a>
+          <a class="side-link" href="#"><img src="../../Group0922/Practise/assets/client/İconsİmages/star.svg" alt="Star" /></a>
+        </nav>
+      </div>
+    </aside>
+
+    <main class="main-detail">
+      
+      <div class="top-header-profile">
+          <img src="../../Group0922/Practise/assets/client/GridImages/avatar.svg" alt="Profile">
+      </div>
+
+      <div class="hero-container">
+          <div class="hero-backdrop" style="background-image: url('../../Group0922/Practise/assets/client/GridImages/detailed.svg');">
+            <div class="fade-overlay"></div>
+          </div>
+
+          <div class="hero-title-box">
+              <span class="hero-genre">Action</span>
+              <h1 class="hero-movie-name">Lost In Space</h1>
+          </div>
+      </div>
+
+
+        
+
+      <div class="content-wrapper">
+        
+        <div class="left-column">
+          <div class="poster-card" onclick="toggleVideo()">
+            <img src="../../Group0922/Practise/assets/client/GridImages/detailed.svg" alt="Movie Poster" />
+            <div class="play-overlay">
+                <i class="fa-solid fa-play"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="right-column">
+          
+         <div class="movie-header">
+            <div class="header-content">
+                <h2 class="promo-text">have you seen our robot?</h2>
+                
+                <div class="watch-container">
+                    <button class="btn-watch">
+                       Watch Link
+                    </button>
+                    <span class="circle-icon"><i class="fa-solid fa-plus"></i></span>
+                </div>
+
+            </div>
+          </div>
+
+          <p class="description">
+            The mission to save Scarecrow takes an unexpected turn, throwing the Resolute into chaos. Judy hatches a plan to get a ship to Alpha Centauri.
+          </p>
+
+          <div class="rating-box">
+            <i class="fa-solid fa-star star-icon"></i> 8.1
+          </div>
+
+          <div class="meta-grid">
+            <div class="meta-item">
+              <span class="label">Type</span>
+              <span class="value">TV Show</span>
+            </div>
+            <div class="meta-item">
+              <span class="label">Status</span>
+              <span class="value">Returning Series</span>
+            </div>
+            <div class="meta-item">
+              <span class="label">No. of season</span>
+              <span class="value">20</span>
+            </div>
+            <div class="meta-item">
+              <span class="label">Date added</span>
+              <span class="value">13.04.2018</span>
+            </div>
+            <div class="meta-item">
+              <span class="label">Date added</span>
+              <span class="value">24.04.2019</span>
+            </div>
+            <div class="meta-item">
+              <span class="label">Episode run time</span>
+              <span class="value">56 min</span>
+            </div>
+          </div>
+
+          <div class="genres">
+            <span class="label">Genres</span>
+            <span class="value">Action & Adventure, Sci-Fi & Fantasy, Drama</span>
+          </div>
+
+          <div class="section-block">
+            <h3 class="section-title">Top Cast</h3>
+            <div class="cast-list">
+              <div class="cast-item">
+                <img src="../../Group0922/Practise/assets/client/GridImages/images 1.svg" alt="Halle" class="cast-img">
+                <div class="cast-info">
+                    <span class="actor-name">Maxwelljenkins</span>
+                </div>
+              </div>
+              <div class="cast-item">
+                <img src="../../Group0922/Practise/assets/client/GridImages/images 1.svg" alt="Halle" class="cast-img">
+                <div class="cast-info">
+                    <span class="actor-name">MaxwellJenkins</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="comment-section">
+            <div class="user-avatar-sm">
+              <img src="../../Group0922/Practise/assets/client/GridImages/avatar.svg" alt="">
+            </div>
+            <input type="text" placeholder="your comment..." class="comment-input" />
+            <button class="btn-send">
+               <img src="../../Group0922/Practise/assets/client/İconsİmages/send.svg" alt="Send"> 
+            </button>
+          </div>
+
+        </div> 
+      </div>
+
+     <div class="similar-wrapper">
+        <h3 class="similar-title">similar movies ›</h3>
+        <div class="grid">
+           
+           <article class="card">
+            <div class="poster" style="background-image:url('../../Group0922/Practise/assets/client/GridImages/grid1.svg')"></div>
+            <div class="meta">
+              <span class="tag">Sci-Fi & Fantasy</span>
+              <div class="stars">★★★★★</div>
+              <h3 class="name"> Wonder Woman 1984</h3>
+            </div>
+           </article>
+
+           <article class="card">
+            <div class="poster" style="background-image:url('../../Group0922/Practise/assets/client/GridImages/grid2.svg')"></div>
+            <div class="meta">
+              <span class="tag">Sci-Fi & Fantasy</span>
+              <div class="stars">★★★★★</div>
+              <h3 class="name">Zack Snyder's Justice League</h3>
+            </div>
+           </article>
+
+           <article class="card">
+            <div class="poster" style="background-image:url('../../Group0922/Practise/assets/client/GridImages/grid3.svg')"></div>
+            <div class="meta">
+              <span class="tag">Sci-Fi & Fantasy</span>
+              <div class="stars">★★★★★</div>
+              <h3 class="name">Mortal Kombat</h3>
+            </div>
+           </article>
+
+           <article class="card">
+            <div class="poster" style="background-image:url('../../Group0922/Practise/assets/client/GridImages/grid4.svg')"></div>
+            <div class="meta">
+              <span class="tag">Action</span>
+              <div class="stars">★★★★★</div>
+              <h3 class="name">The Courier</h3>
+            </div>
+           </article>
+
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <div id="videoModal" class="modal-overlay">
+    <div class="modal-content">
+      <div class="close-modal-container">
+          <span class="close-modal" onclick="toggleVideo()">×</span>
+      </div>
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/R81v-XEnJjA" title="Trailer" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <script>
+    function toggleVideo() {
+      document.getElementById('videoModal').classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
